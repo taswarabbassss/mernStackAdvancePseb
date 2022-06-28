@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    color: red;
+}
+p {
+    text-align: justify;
+    color: brown;
+  }
+.my{
+    color: red;
+    text-shadow: blue;
+    text-align: center;
+}
+#intro{
+    color: crimson;
+}
