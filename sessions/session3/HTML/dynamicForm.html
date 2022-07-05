@@ -21,6 +21,47 @@
     <tr id="tr"></tr>
   </body>
   <script>
+    class Car {
+      constructor(name, model, color, company) {
+        this.brand = name;
+        this.manufacturer = company;
+        this.color = color;
+        this.model = model;
+      }
+
+      start() {
+        alert(this.color + " " + this.brand + " started🚔....." + "<br>");
+      }
+      stop() {
+        alert(this.color + " " + this.brand + " stopped🛑!!!!" + "<br>");
+      }
+      left() {
+        alert(this.color + " " + this.brand + " Left Turned 👈!!!!" + "<br>");
+      }
+      right() {
+        alert(this.color + " " + this.brand + " Right Turned 👈!!!!" + "<br>");
+      }
+      show() {
+        document.write(
+          "Name: " +
+            this.brand +
+            "<br>" +
+            "Color: " +
+            this.color +
+            "<br>" +
+            "Model: " +
+            this.model +
+            "<br>" +
+            "Manifacturer: " +
+            this.manufacturer
+        );
+      }
+    }
+
+    const newCar = new Car("Vigo", 2022, "Black", "Toyota");
+
+    newCar.show();
+
     const coarses = [
       { name: "BS Software Engineering", num: "SE1122" },
       { name: "BS Computer Science", num: "SE1122" },
@@ -34,6 +75,5 @@
     const table = document.getElementById("coarsesTable");
     const tr = document.getElementById("tr");
     for (let i = 0; i < coarses.length; i++) {}
-    table.appendChild();
   </script>
 </html>
