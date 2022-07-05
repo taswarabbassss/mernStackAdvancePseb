@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration From</title>
+    <link rel="stylesheet" href="/cssFiles/form.css" />
+    <link rel="stylesheet" href="/cssFiles/navBar.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/HTML/indexTwo.html">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">About</a>
+      <a href="/HTML/studentRegistrationFrom.html" style="float: right"
+        >Register Here</a
+      >
+    </nav>
+
+    <div id="main">
+      <header>
+        <h3>STUDENT REGISTRATION FORM</h3>
+      </header>
+
+      <form
+        name="myForm"
+        action="window"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <label style="margin-right: 33px" class="lables alignment" for="name"
+          >Name:
+        </label>
+        <input
+          class="alignment"
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="First Name"
+          required
+        />
+        <input
+          class="alignment"
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Last Name"
+          required
+        /><br />
+        <label class="alignment" for="Company">Company: </label>
+        <input
+          style="width: 347px"
+          class="alignment"
+          name="company"
+          id="company"
+        />
+        <br />
+        <label style="margin-right: 35px" class="alignment" for="email"
+          >Email:
+        </label>
+        <input
+          style="width: 348px"
+          class="alignment"
+          type="text"
+          name="email"
+          id="email"
+          placeholder="example@email.com"
+        />
+        <br />
+        <label style="margin-right: 32px" class="alignment" for="phone"
+          >Phone:
+        </label>
+        <input
+          style="width: 70px"
+          class="alignment"
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Area Code"
+        />
+        <input
+          style="width: 245px"
+          type="text"
+          class="alignment"
+          name="phone"
+          id="phone"
+        />
+        <br />
+
+        <label style="margin-right: 20px" class="alignment" for="subject"
+          >Subject:
+        </label>
+        <select
+          style="width: 357px"
+          name="select"
+          class="alignment"
+          id="select"
+        >
+          <option value="">Choose Option</option>
+          <option value="we">Web Engineering</option>
+          <option value="mad">Mobile Application Development</option>
+          <option value="acp">Advance Computer Programming</option>
+          <option value="oop">Object Oriented Paradigm</option>
+          <option value="dsa">Data Structure and Algorithms</option>
+          <option value="dbms">Database Management System</option>
+        </select>
+        <p>Are you enrolled already?</p>
+        <input
+          class="alignment"
+          type="radio"
+          id="yes"
+          name="option"
+          value="yes"
+        />
+        <label class="alignment" for="html">Yes</label><br />
+        <input
+          class="alignment"
+          type="radio"
+          id="no"
+          name="option"
+          value="no"
+        />
+        <label class="alignment" for="css">No</label><br />
+        <input
+          style="
+            background-color: red;
+            color: aliceblue;
+            border-radius: 3px;
+            width: 90px;
+            border: none;
+          "
+          class="alignment"
+          type="submit"
+          value="Register"
+        />
+      </form>
+    </div>
+  </body>
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+  </script>
+</html>

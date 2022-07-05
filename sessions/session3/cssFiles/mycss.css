@@ -1,0 +1,156 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  }
+
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  /* #cv {
+    position: absolute;
+    left: 140px;
+    top: 100px;
+
+  }
+  #para{
+    position: absolute;
+    left: 140px;
+    top: 180px;
+  }
+  #img{
+    position: absolute;
+    left: 80px;
+    top: 140px;
+  }
+  Header/Blog Title */
+  header {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 400px;
+    color: aliceblue;
+    text-align: center;
+    background: white;
+    width: 100%;
+  
+  }
+  
+  .wlogo{
+    left: 100%;
+    bottom:0;
+    position: sticky;
+  }
+
+  #brading{
+    width: 100%;
+  
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+
+  #brandingChild{
+display: grid;
+
+  }
+#img{
+  left:20px;
+  position: relative;
+  top: 110px;
+}
+#iiui{
+  top: 0px;
+  width: 70%;
+  position: relative;
+  left: 10px;  
+  margin: 7px;
+}
+#para{
+  width: 70%;
+  
+  position: relative;
+  left: 50px;
+  top: 0%;
+}
+
+  header video{
+    width: 100%;
+  
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  /* Style the top navigation bar */
+
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
