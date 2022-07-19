@@ -9,17 +9,9 @@
 
   <body>
     <header>Program Offered</header>
-    <table id="coarsesTable">
-      <tr>
-        <th>Name</th>
-        <th>CODE</th>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-    </table>
-    <tr id="tr"></tr>
+    <div id="myTable"></div>
   </body>
+
   <script>
     class Car {
       constructor(name, model, color, company) {
@@ -61,7 +53,7 @@
     const newCar = new Car("Vigo", 2022, "Black", "Toyota");
 
     newCar.show();
-
+    const headers = ["Coarse Name", "Coarse Number"];
     const coarses = [
       { name: "BS Software Engineering", num: "SE1122" },
       { name: "BS Computer Science", num: "SE1122" },
@@ -70,10 +62,35 @@
       { name: "BS Statistics", num: "BS1122" },
       { name: "BS Usuluddin", num: "BU1122" },
       { name: "BS Shria and Law", num: "BSL1122" },
+      { name: "BS Software Engineering", num: "SE1122" },
+      { name: "BS Computer Science", num: "SE1122" },
+      { name: "BS Information Technology", num: "IT1122" },
+      { name: "BS Mathematics", num: "MT1122" },
+      { name: "BS Statistics", num: "BS1122" },
+      { name: "BS Usuluddin", num: "BU1122" },
+      { name: "BS Shria and Law", num: "BSL1122" },
     ];
-    const headers = ["Coarse Name", "Coarse Number"];
-    const table = document.getElementById("coarsesTable");
-    const tr = document.getElementById("tr");
-    for (let i = 0; i < coarses.length; i++) {}
+    const tr = document.createElement("tr");
+    const table = document.createElement("table");
+    headers.forEach((element) => {
+      const th = document.createElement("th");
+      th.innerHTML = element;
+      tr.appendChild(th);
+    });
+    table.appendChild(tr);
+    for (let i = 0; i < coarses.length; i++) {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      const td2 = document.createElement("td");
+      let name = coarses[i].name;
+      td1.innerHTML = coarses[i].name;
+      td2.innerHTML = coarses[i].num;
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      table.appendChild(tr);
+    }
+    table.setAttribute("border", true);
+    const myTable = document.getElementById("myTable");
+    myTable.appendChild(table);
   </script>
 </html>
