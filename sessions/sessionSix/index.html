@@ -5,135 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Session Six</title>
+    <script src="script.js"></script>
   </head>
   <body>
-    <script>
-       import name from "./person.js";
-      
-      class Car {
-        constructor(name) {
-          this.brand = name;
-        }
-        present() {
-          return "I have a " + this.brand;
-        }
-      }
+    <!-- <form onsubmit="handleSubmit(e)">
+      <input type="text" id="email" placeholder="email" />
+      <input type="text" id="password" placeholder="password" />
+      <input type="submit" />
+    </form>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe tempore modi a aliquid at dolores amet corrupti ab, recusandae molestias dignissimos similique ratione quod odit atque hic voluptatibus facilis adipisci! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus autem iusto, vitae obcaecati, asperiores vero quos hic enim a ex voluptatum voluptatem magnam. Laudantium autem aperiam, officiis modi mollitia ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, explicabo doloribus laboriosam, dolor, dignissimos voluptatum tenetur fuga libero maxime expedita ex vitae dicta? Labore recusandae eum eaque ex voluptatum possimus?</p>
+    <div id="output"></div> -->
 
-      class Model extends Car {
-        constructor(name, mod) {
-          super(name);
-          this.model = mod;
-        }
+    <!-- <script>
+      // function handleSubmit(e) {
+      //   e.preventDefault();
+      //   var myHeaders = new Headers();
+      //   myHeaders.append(
+      //     "Authorization",
+      //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOGExZDViMDE5MGIyMTQzNjBkYzA1NyIsImlhdCI6MTY1ODE1NDI4MywiZXhwIjoxNjY1OTMwMjgzfQ.vsLlIGXg_UlLl1AXv-6j0JXhEAwY0lTAUHzpjMMkcmY"
+      //   );
+      //   myHeaders.append("Content-Type", "application/json");
+      //   myHeaders.append(
+      //     "Cookie",
+      //     "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOGExZDViMDE5MGIyMTQzNjBkYzA1NyIsImlhdCI6MTY1ODE1NDI4MywiZXhwIjoxNjY1OTMwMjgzfQ.vsLlIGXg_UlLl1AXv-6j0JXhEAwY0lTAUHzpjMMkcmY"
+      //   );
+      //   const email = document.getElementById("email");
+      //   const password = document.getElementById("password");
 
-        show() {
-          return this.present() + " It's a " + this.model;
-        }
-      }
-      document.write("----------- Classes -----------------");
-      document.write("<br>");
-      const mycar = new Model("Ford", "Mustang");
-      document.write(mycar.show());
-      document.write("<br>");
-      helo = (val) => {
-        return "Hello " + val;
-      };
-      document.write("----------- Arrow Functions -----------------");
-      document.write("<br>");
-      document.write(helo("I am Tasawar.."));
-      document.write("<br>");
-      const myArray = ["Pakistan", "Turkey", "Iran"];
-      const myList = myArray.map((item) => item + " Is a Country... ");
-      document.write("----------- Array Methods MAP -----------------");
-      document.write("<br>");
-      document.write(myArray);
-      document.write("<br>");
-      document.write(myList);
+      //   const output = document.getElementById("output");
 
-      const vehicles = ["mustang", "f-150", "expedition"];
-      const [car, , suv] = vehicles;
-      document.write("<br>");
-      document.write("----------- Destructuring Arrays -----------------");
-      document.write("<br>");
-      document.write(car, suv);
-      document.write("<br>");
+      //   var raw = JSON.stringify({
+      //     email: email,
+      //     password: password,
+      //   });
 
-      function calculate(a, b) {
-        const add = a + b;
-        const multiply = a * b;
-        const subtract = a - b;
-        const divide = a / b;
-        return [add, subtract, multiply, divide];
-      }
+      //   var requestOptions = {
+      //     method: "POST",
+      //     headers: myHeaders,
+      //     body: raw,
+      //     redirect: "follow",
+      //   };
 
-      const [add, subtract, multiply, divide] = calculate(4, 7);
-      document.write(add);
-      document.write("<br>");
-      document.write(subtract);
-      document.write("<br>");
-      document.write(multiply);
-      document.write("<br>");
-      document.write(divide);
-      document.write("<br>");
-
-      const vehicleOne = {
-        brand: "Ford",
-        model: "Mustang",
-        type: "car",
-        year: 2021,
-        color: "red",
-      };
-
-      myVehicleFunction = ({ type, color, brand, model }) => {
-        const message =
-          "My " + type + " is a " + color + " " + brand + " " + model + " .";
-        return message;
-      };
-      document.write("----------- Destructuring Objects -----------------");
-      document.write("<br>");
-      document.write("<br>");
-      document.write(myVehicleFunction(vehicleOne));
-
-      const numbersOne = [1, 2, 3];
-      const numbersTwo = [4, 5, 6];
-      document.write("<br>");
-      document.write("----------- Spread Operator -----------------");
-      document.write("<br>");
-      const numbersCombined = [...numbersOne, ...numbersTwo];
-      document.write("<br>");
-      document.write(numbersOne);
-      document.write("<br>");
-      document.write(numbersTwo);
-      document.write("<br>");
-      document.write(numbersCombined);
-
-      const [one, two, ...rest] = numbersCombined;
-      document.write("<br>");
-      document.write(one);
-      document.write("<br>");
-      document.write(two);
-      document.write("<br>");
-      document.write(rest);
-      document.write("<br>");
-
-      const myVehicle = {
-        brand: "Ford",
-        model: "Mustang",
-        color: "red",
-      };
-
-      const updateMyVehicle = {
-        type: "car",
-        year: 2021,
-        color: "yellow",
-      };
-
-      const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
-      document.write("<br>");
-      document.write(myUpdatedVehicle);
-
-       
-        document.write("<br>");
-        document.write(name);
-    </script>
+      //   fetch("http://127.0.0.1:3000/api/v1/users/login", requestOptions)
+      //     .then((response) => response.text())
+      //     .then((result) => (output.innerText = result))
+      //     .catch((error) => console.log("error", error));
+      // }
+    </script> -->
   </body>
 </html>
